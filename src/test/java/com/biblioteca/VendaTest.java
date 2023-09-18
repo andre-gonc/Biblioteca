@@ -12,15 +12,19 @@ public class VendaTest {
          */
         @Test
         public void testConstrutorComParametros() {
-                
-                LivroVenda livroVenda = new LivroVenda();
+
+                Autor autor = new Autor("João", "Gonçalves");,
+                Editora editora = new Editora("Minha Editora");
+                Livro livro = new Livro(autor, editora, "1234567890", "O Soberano", "633");
+                LivroEstoque livroDoEstoque = new LivroEstoque(livro, 10, 100.00);
+                LivroVenda livroVenda = new LivroVenda(livroDoEstoque, 3);
                 
                 Venda venda = new Venda("João", "Crédito", 100.00, livroVenda);
                 
                 Assert.assertEquals("João", venda.nomeCliente);
                 Assert.assertEquals("Crédito", venda.formaPagamento);
                 Assert.assertEquals(100.00, venda.valorDado, 0.001);
-                
+                Assert.assertEquals(venda.livroVenda, )
         }
 
         /**
@@ -28,10 +32,11 @@ public class VendaTest {
          */
         @Test
         public void testConstrutorSemParametros() {
-                Autor autor = new Autor();
+                Venda venda = new Venda();
                 Assert.assertNull(venda.nomeCliente);
                 Assert.assertNull(venda.formaPagamento);
                 Assert.assertNull(venda.valorDado);
+                Assert.assertNull(venda.livros);
         }
 
 }
