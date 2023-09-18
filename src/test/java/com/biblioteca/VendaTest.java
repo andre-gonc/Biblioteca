@@ -24,7 +24,7 @@ public class VendaTest {
                 Assert.assertEquals("João", venda.nomeCliente);
                 Assert.assertEquals("Crédito", venda.formaPagamento);
                 Assert.assertEquals(100.00, venda.valorDado, 0.001);
-                Assert.assertEquals("O Soberano", venda.livroVenda.livroDoEstoque.livro.titulo)
+                Assert.assertEquals(livroVenda, venda.livroVenda)
         }
 
         /**
