@@ -12,18 +12,14 @@ public class VendaTest {
          */
         @Test
         public void testConstrutorComParametros() {
+                
                 LivroVenda livroVenda = new LivroVenda();
-                String nomeCliente = "João";
-                String formaPagamento = "Crédito";
-                double valorDado = 100.00;
-                Livros =  
-                Venda venda = new Venda(nomeCliente, formaPagamento, valorDado);
-                Assert.assertNotNull(venda.nomeCliente);
-                Assert.assertNotNull(venda.formaPagamento);
-                Assert.assertNotNull(venda.valorDado);
-                Assert.assertEquals(venda.nomeCliente, nomeCliente);
-                Assert.assertEquals(venda.formaPagamento, formaPagamento);
-                Assert.assertEquals(venda.valorDado, valorDado);
+                
+                Venda venda = new Venda("João", "Crédito", 100.00, livroVenda);
+                
+                Assert.assertEquals("João", venda.nomeCliente);
+                Assert.assertEquals("Crédito", venda.formaPagamento);
+                Assert.assertEquals(100.00, venda.valorDado, 0.001);
                 
         }
 
