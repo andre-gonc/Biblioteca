@@ -6,19 +6,25 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
-public class AutorTest {
+public class VendaTest {
         /**
          * Test do construtor com parâmetros
          */
         @Test
         public void testConstrutorComParametros() {
-                String nome = "João";
-                String sobrenome = "Silva";
-                Autor autor = new Autor(nome, sobrenome);
-                Assert.assertNotNull(autor.nome);
-                Assert.assertNotNull(autor.sobrenome);
-                Assert.assertEquals(autor.nome, nome);
-                Assert.assertEquals(autor.sobrenome, sobrenome);
+                LivroVenda livroVenda = new LivroVenda();
+                String nomeCliente = "João";
+                String formaPagamento = "Crédito";
+                double valorDado = 100.00;
+                Livros =  
+                Venda venda = new Venda(nomeCliente, formaPagamento, valorDado);
+                Assert.assertNotNull(venda.nomeCliente);
+                Assert.assertNotNull(venda.formaPagamento);
+                Assert.assertNotNull(venda.valorDado);
+                Assert.assertEquals(venda.nomeCliente, nomeCliente);
+                Assert.assertEquals(venda.formaPagamento, formaPagamento);
+                Assert.assertEquals(venda.valorDado, valorDado);
+                
         }
 
         /**
@@ -27,8 +33,9 @@ public class AutorTest {
         @Test
         public void testConstrutorSemParametros() {
                 Autor autor = new Autor();
-                Assert.assertNull(autor.nome);
-                Assert.assertNull(autor.sobrenome);
+                Assert.assertNull(venda.nomeCliente);
+                Assert.assertNull(venda.formaPagamento);
+                Assert.assertNull(venda.valorDado);
         }
 
 }
